@@ -29,7 +29,8 @@ jobs:
       - name: Extract Version
         id: get_version
         run: |
-          VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" _build/Payload/*.app/Info.plist)
+          PLIST_PATH=$(find . -name "Info.plist" | grep ".app/" | head -n 1)
+          VERSION=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "$PLIST_PATH")
           echo "VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Create Release
