@@ -1,8 +1,8 @@
 //
 //  SettingsView.swift
-//  Feather
+//  Swift Store
 //
-//  Created by samara on 10.04.2025.
+//  Created by aboud on 12.05.2026.
 //
 
 import SwiftUI
