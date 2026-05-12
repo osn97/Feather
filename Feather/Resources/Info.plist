@@ -198,5 +198,10 @@
 			</dict>
 		</dict>
 	</array>
+	<key>CFBundleDisplayName</key>
+<string>Swift Store</string>
+<key>CFBundleName</key>
+<string>Swift Store</string>
+
 </dict>
 </plist>
