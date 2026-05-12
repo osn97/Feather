@@ -1,8 +1,8 @@
 //
 //  AboutView.swift
-//  Feather
+//  Swift Store
 //
-//  Created by samara on 30.04.2025.
+//  Created by aboud on 12.05.2026.
 //
 
 import SwiftUI
@@ -71,6 +71,45 @@ struct AboutView: View {
 						.foregroundStyle(.secondary)
 						.padding(.vertical, 2)
 				}
+				VStack(spacing: 15) {
+    // اسم التطبيق الجديد
+    Text("Swift Store")
+        .font(.largeTitle)
+        .fontWeight(.bold)
+
+    Text("Abdulbasit Khudhair")
+        .font(.title3)
+        .foregroundColor(.secondary)
+
+    Divider()
+
+    // روابط الحسابات
+    Group {
+        Link(destination: URL(string: "https://t.me/osn97")!) {
+            HStack {
+                Image(systemName: "paperplane.fill")
+                Text("Telegram Channel")
+            }
+        }
+        
+        Link(destination: URL(string: "https://www.instagram.com/osn97")!) {
+            HStack {
+                Image(systemName: "camera.fill")
+                Text("Instagram")
+            }
+        }
+        
+        Link(destination: URL(string: "https://www.tiktok.com/@osn97")!) {
+            HStack {
+                Image(systemName: "video.fill")
+                Text("TikTok")
+            }
+        }
+    }
+    .padding(.vertical, 5)
+    .font(.headline)
+}
+
 			}
 		}
 		.animation(.default, value: isLoading)
